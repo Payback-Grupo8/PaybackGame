@@ -4,6 +4,7 @@ Juegos en Red
 Game Design Document
 
 
+![payback](https://github.com/user-attachments/assets/f8581f69-3f3c-4251-a570-52467556726a)
 
 
 
@@ -380,6 +381,7 @@ Este diagrama de flujo enseña las distintas pantallas que tiene el juego y sus 
 
 
 
+![diagrama de flujo](https://github.com/user-attachments/assets/2714b4a2-232f-435f-86f4-8e16f32db628)
 
 
 
