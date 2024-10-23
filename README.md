@@ -24,10 +24,10 @@ Versión: 0.0.1
 Grupo 8
 
 Escrito por:
-María González Martínez-Cubells
-José Antonio Moratalla Zabala
-Javier Luis Moreno Erustes
-Carlos Vega San Román
+María González Martínez-Cubells: m.gonzalezma.2020@alumnos.urjc.es / https://github.com/mgmcubells
+José Antonio Moratalla Zabala: ja.moratalla.2020@alumnos.urjc.es / https://github.com/janmorata
+Javier Luis Moreno Erustes: jl.moreno.2020@alumnos.urjc.es / https://github.com/ChonLarsen
+Carlos Vega San Román: c.vegas.2020@alumnos.urjc.es
 
 # Índice
 
