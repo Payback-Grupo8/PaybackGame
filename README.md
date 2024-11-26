@@ -373,7 +373,7 @@ Las interacciones entre elementos y las colisiones añaden profundidad táctica 
 En Payback, cada pantalla juega un papel crucial en la experiencia de juego, proporcionando información, opciones y desafíos para los jugadores. Aquí se detallan las distintas pantallas del juego, sus transiciones y su utilidad:
 
 
-## Diagrama de Flujo
+### Diagrama de Flujo
 
 Este diagrama de flujo enseña las distintas pantallas que tiene el juego y sus transiciones entre ellas. El diagrama proporciona una guía visual clara de las pantallas del juego y las transiciones entre ellas, ayudando a los jugadores a navegar por el juego de manera efectiva y disfrutar de una experiencia de juego fluida y envolvente.
 
@@ -397,7 +397,7 @@ Este diagrama de flujo enseña las distintas pantallas que tiene el juego y sus 
 
 
 
-## Menú Principal
+### Menú Principal
 
 El menú principal de Payback es la puerta de entrada a la experiencia de juego, ofreciendo una interfaz sencilla pero efectiva para que los jugadores puedan comenzar a jugar rápidamente. Este consta de varios elementos: 
 
@@ -420,23 +420,23 @@ El botón "Créditos"
 Permite a los jugadores conocer a los autores.
 
 
-## Menú Controles
+### Menú Controles
 Se muestran los controles para ambos jugadores, movimiento y disparo para cada personaje.
 
-## Menú Instrucciones
+### Menú Instrucciones
 Se muestran a los jugadores cómo jugar las partidas y pequeños consejos a seguir.
 
-## Menú Créditos
+### Menú Créditos
 Aquí se muestran los nombres de los integrantes del equipo.
 
 
-## Menú de Pausa
+### Menú de Pausa
 
 El menú de pausa proporciona a los jugadores la capacidad de tomar un respiro durante la partida y realizar acciones adicionales sin interferir con la acción del juego
 Acceso con la tecla ‘Esc’ los jugadores pueden pausar la partida presionando la tecla ‘Esc’ en su teclado o con el botón de Pause incluido en la parte superior de la pantalla. 
 Dentro del menú de pausa, los jugadores tienen la opción de continuar la partida o salir de la partida, con los botones explicados anteriormente.
 
-## Menú de Victoria
+### Menú de Victoria
 
 En esta escena se muestra que jugador ha ganado y un botón para regresar al menú principal
 
