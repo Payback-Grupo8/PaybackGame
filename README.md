@@ -397,7 +397,7 @@ Este diagrama de flujo enseña las distintas pantallas que tiene el juego y sus 
 
 
 
-# Menú Principal
+## Menú Principal
 
 El menú principal de Payback es la puerta de entrada a la experiencia de juego, ofreciendo una interfaz sencilla pero efectiva para que los jugadores puedan comenzar a jugar rápidamente. Este consta de varios elementos: 
 
@@ -405,28 +405,40 @@ El menú principal de Payback es la puerta de entrada a la experiencia de juego,
 
 Título del videojuego (Payback) ubicado en la parte superior de la pantalla, el título "Payback" se presenta de manera prominente, destacando la identidad del juego y estableciendo el tono para la experiencia que está por venir.
 
-Dos botones de navegación: jugar y salir del juego. 
+Cuatro botones de navegación: jugar y salir del juego. 
 
 El botón "Jugar"
 Permite a los jugadores acceder al menú de selección de personajes, donde podrán prepararse para la partida.
 
-El botón "Salir del Juego"
-Permite a los jugadores abandonar el juego y volver al escritorio u otro destino fuera del juego.
+El botón "Controles"
+Permite a los jugadores conocer los controles de la partida.
+
+El botón "Instrucciones"
+Permite a los jugadores conocer las instrucciones del videojuego.
+
+El botón "Créditos"
+Permite a los jugadores conocer a los autores.
 
 
-# Menú de Selección del Personaje
+## Menú Controles
+Se muestran los controles para ambos jugadores, movimiento y disparo para cada personaje.
 
-El menú de selección del personaje es un espacio interactivo donde los jugadores pueden personalizar su experiencia de juego eligiendo a su personaje. Cada jugador puede elegir a su personaje favorito de entre una variedad de opciones disponibles,  pueden tener habilidades y características únicas que influyen en el estilo de juego.
+## Menú Instrucciones
+Se muestran a los jugadores cómo jugar las partidas y pequeños consejos a seguir.
 
-Una vez que ambos jugadores han seleccionado sus personajes, pueden confirmar su preparación presionando el botón "Listo" ubicado en la parte inferior de la pantalla, cuando ambos jugadores están listos, se activa el inicio de la partida.
+## Menú Créditos
+Aquí se muestran los nombres de los integrantes del equipo.
 
 
-# Menú de Pausa
+## Menú de Pausa
 
 El menú de pausa proporciona a los jugadores la capacidad de tomar un respiro durante la partida y realizar acciones adicionales sin interferir con la acción del juego
-Acceso con la tecla ‘Esc’ los jugadores pueden pausar la partida presionando la tecla ‘Esc’ en su teclado. 
-Dentro del menú de pausa, los jugadores tienen la opción de continuar la partida o salir del juego, con los botones explicados anteriormente.
+Acceso con la tecla ‘Esc’ los jugadores pueden pausar la partida presionando la tecla ‘Esc’ en su teclado o con el botón de Pause incluido en la parte superior de la pantalla. 
+Dentro del menú de pausa, los jugadores tienen la opción de continuar la partida o salir de la partida, con los botones explicados anteriormente.
 
+## Menú de Victoria
+
+En esta escena se muestra que jugador ha ganado y un botón para regresar al menú principal
 
 
 
