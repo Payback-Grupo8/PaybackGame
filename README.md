@@ -8,7 +8,7 @@ Game Design Document
 
 
 
-Versión: 0.0.1
+Versión: 0.3.1
 
 
 
