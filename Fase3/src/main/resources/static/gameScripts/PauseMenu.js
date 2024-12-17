@@ -54,9 +54,10 @@ class PauseMenuScene extends Phaser.Scene {
                 this.resumeButton.setScale(1);
             });
         }
-        this.gameScene = this.scene.get('GameScene');
+        const gameScene = this.scene.get('GameScene');
 
         this.exitButtonContainer.on('pointerdown', function () {
+            gameScene.shutdown();
             this.scene.scene.bringToTop('MainMenuScene');
             this.scene.scene.start('MainMenuScene');
         })

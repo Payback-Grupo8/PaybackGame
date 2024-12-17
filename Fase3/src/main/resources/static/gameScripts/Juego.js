@@ -237,6 +237,9 @@ class EscenaJuego extends Phaser.Scene {
         //Collider entre player y plataformas
         this.physics.add.collider(this.player1, this.platforms);
         this.physics.add.collider(this.player2, this.platforms);
+
+        this.input.keyboard.enabled = true;  
+
         //Pad
         this.cursors = this.input.keyboard.createCursorKeys();
         //Teclas
@@ -246,6 +249,7 @@ class EscenaJuego extends Phaser.Scene {
         this.keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
         this.keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
         this.keyEsc = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ESC);
+        
         
         //Disparos 
         this.disparosP1 = new Player1BulletGroup(this);
@@ -507,7 +511,13 @@ class EscenaJuego extends Phaser.Scene {
 
     // Método llamado cuando la escena es destruida o cambiada
     shutdown() {
-        // Desactiva el teclado para evitar que se sigan detectando las teclas cuando cambies a otra escena
+        // Desactiva el teclado para evitar que se sigan detectando las teclas cuando cambies a otra escena   
+        console.log('Shutting down GameScene');  
+        this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.P);
+        this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.A);
+        this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.D);
+        this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.W);
+        this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.F);
         this.input.keyboard.enabled = false;  
     }
 }
