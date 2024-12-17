@@ -242,7 +242,6 @@ class EscenaJuego extends Phaser.Scene {
         //Teclas
         this.keyP = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.P);
         this.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
-        this.keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
         this.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
         this.keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
         this.keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
@@ -508,21 +507,8 @@ class EscenaJuego extends Phaser.Scene {
 
     // Método llamado cuando la escena es destruida o cambiada
     shutdown() {
-        /*this.keyP.removeKey;
-        this.keyA.removeKey;
-        this.keyS.removeKey;
-        this.keyD.removeKey;
-        this.keyW.removeKey;
-        this.keyF.removeKey;
-        this.keyEsc.removeKey;*/
-        this.keyP = this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.P);
-        this.keyA = this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.A);
-        this.keyS = this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.S);
-        this.keyD = this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.D);
-        this.keyW = this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.W);
-        this.keyF = this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.F);
-        this.keyEsc = this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.ESC);
-        //super.destroy();        
+        // Desactiva el teclado para evitar que se sigan detectando las teclas cuando cambies a otra escena
+        this.input.keyboard.enabled = false;  
     }
 }
 
