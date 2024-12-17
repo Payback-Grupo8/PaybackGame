@@ -17,12 +17,12 @@ class VictoryScenePlayer2 extends Phaser.Scene {
         //Cargamos las imágenes
         this.load.image('fondoFinal', 'assets/images/imagenFinal.png');
         this.load.image('botonReiniciar', 'assets/images/reiniciar.png');
-        this.load.image('TextoW', 'assets/images/vicP2.png');
+        this.load.image('TextoW2', 'assets/images/vicP2.png');
     }
 
     create() {
         //Colocamos la imagen de victoria
-        this.victoryTextPlayer2 = this.add.image(400, 200, 'TextoW');
+        this.victoryTextPlayer2 = this.add.image(400, 200, 'TextoW2');
         this.victoryTextPlayer2.setScale(0.3);
         //Colocamos la imagen de fondo
         this.background = this.add.image(400, 300, 'fondoFinal');
