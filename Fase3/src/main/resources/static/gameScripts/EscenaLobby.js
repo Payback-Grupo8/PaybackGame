@@ -57,6 +57,9 @@ class Lobby extends Phaser.Scene {
                 this.id = player.id; // Asegurarse de que se usa this.id
                 callback(player);
                 $('#info-players').append('<div><span>' + "Espera " + player.username + ", te estás conectando..." + '</span></div>');
+            }).fail(() => {
+                console.log("Error al conectar el jugador");
+                $('#info-players').append('<div><span>' + "Error al conectar, por favor intente nuevamente." + '</span></div>');
             });
         }
 
@@ -134,6 +137,10 @@ class Lobby extends Phaser.Scene {
                         for (var i = 0; i < chat.length; i++) {
                             $('#chat').append('<div><span style="color:white">' + chat[i] + '</span></div>');
                         }
+                    }).fail((error) => {
+                        // Cuando la conexión se pierde, mostramos el pop-up de error
+                        alert("¡Se ha perdido la conexión al servidor!"); // Pop-up de conexión perdida
+                        console.log("Error al cargar el chat: ", error);
                     });
                 }, 3000);
 
@@ -145,6 +152,10 @@ class Lobby extends Phaser.Scene {
                         for (var i = 0; i < Player.length; i++) {
                             showPlayer(Player[i]);
                         }
+                    }).fail((error) => {
+                        // Cuando no se puede acceder a los jugadores, también lanzamos el pop-up
+                        alert("¡Se ha perdido la conexión al servidor!"); // Pop-up de conexión perdida
+                        console.log("Error al cargar los jugadores: ", error);
                     });
                 }, 3000);
             });
