@@ -21,6 +21,7 @@ class Lobby extends Phaser.Scene {
 
         // Inicializar teclas
         this.returnKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ESC);
+        this.input.keyboard.enabled = true; 
 
         // Configurar llamadas AJAX
         this.setupAjaxCalls();
