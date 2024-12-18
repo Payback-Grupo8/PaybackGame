@@ -4,3 +4,6 @@ Jose: Que tal estas?
 Chon: Juju
 antonio: Hola
 Chon: hi
+Chon: Buenas tardes
+Juan: Buen día a todos
+Antonio: Hola Juan
