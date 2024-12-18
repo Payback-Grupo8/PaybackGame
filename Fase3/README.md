@@ -545,7 +545,12 @@ Además de la creación y recuperación de recursos, la API permite obtener info
 
 En resumen, esta API REST está diseñada para ser robusta y fácil de usar, permitiendo una gestión eficiente del lobby y del chat de usuarios. Al seguir las buenas prácticas de desarrollo de APIs REST, como el uso adecuado de los métodos HTTP y los códigos de estado, se asegura que los clientes de la API puedan entender y manejar adecuadamente las respuestas del servidor. Esto facilita una integración fluida con otras aplicaciones o servicios, haciendo de esta API una herramienta valiosa para cualquier aplicación que requiera la gestión de usuarios y mensajes en tiempo real.
 
+Para ejecutar el archivo .jar, que se encuentra en la siguiente ruta:
+...src\main\java\com\payback\demo\PayBackApplication.java
 
+Con ello debes ejecutar esa aplicación.java y en el navegador debes escribir LocalHost:8080
+
+![Diagrama de clases](Capturas/diagrama.jpg)
 
 
 
