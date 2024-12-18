@@ -381,7 +381,7 @@ Este diagrama de flujo enseña las distintas pantallas que tiene el juego y sus 
 
 
 
-![Diagrama](Capturas/diagrama_de_estados.jpg)
+![Diagrama](Capturas/diagrama_estados.jpg)
 
 
 
