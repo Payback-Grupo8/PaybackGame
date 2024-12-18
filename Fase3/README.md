@@ -419,6 +419,13 @@ Permite a los jugadores conocer las instrucciones del videojuego.
 El botón "Créditos"
 Permite a los jugadores conocer a los autores.
 
+El botón "Chat"
+Permite a los jugadores conectar entre si a través de un chat.
+
+### Chat
+Aquí el jugador podrá interactuar con otros jugadores a través de un chat, primero deberá conectarse con un nombre de usuario y posteriormente podrá escribir por un chat global.
+![Chat](Capturas/Chat.jpg)
+
 
 ### Menú Controles
 Se muestran los controles para ambos jugadores, movimiento y disparo para cada personaje.
