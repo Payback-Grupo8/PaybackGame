@@ -400,7 +400,7 @@ Este diagrama de flujo enseña las distintas pantallas que tiene el juego y sus 
 ### Menú Principal
 
 El menú principal de Payback es la puerta de entrada a la experiencia de juego, ofreciendo una interfaz sencilla pero efectiva para que los jugadores puedan comenzar a jugar rápidamente. Este consta de varios elementos: 
-![Menu](Capturas/Juego.jpg)
+![Menu](Capturas/MenuInicial.jpg)
 
 
 Título del videojuego (Payback) ubicado en la parte superior de la pantalla, el título "Payback" se presenta de manera prominente, destacando la identidad del juego y estableciendo el tono para la experiencia que está por venir.
@@ -452,7 +452,7 @@ Los escenarios en Payback ofrecen una variedad de entornos únicos donde se desa
 
 Los escenarios cuentan con diferentes niveles en el eje y  están compuestos por plataformas flotantes, agregando una dimensión vertical a la jugabilidad y permitiendo estrategias de movimiento y combate complejas. Al inicio de la partida, cada jugador aparece en puntos distintos del mapa, lo que fomenta la estrategia al comenzar el juego.
 
-![Juego](Capturas/Juego.jpeg)
+![Juego](Capturas/Juego.jpg)
 
 # Modos de juego
 
