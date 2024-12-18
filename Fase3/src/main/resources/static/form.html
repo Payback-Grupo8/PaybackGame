@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -5,16 +6,15 @@
         .todoDiv {
             display: flex;
             width: 800px;
-            height: 455px;
+            height: 600px;
             position: relative;
-            top: 110px;
             left: 0px;
         }
 
         .chatDiv {
             flex: 2;
             table-layout: fixed;
-            width: 400px;
+            width: 800px;
             min-width: 400px;
             max-width: 400px;
             height: 600px;
@@ -39,13 +39,62 @@
             padding: 5px;
             color: white;
             overflow: scroll;
-        }      
+        }
+
+        input {
+            width: calc(100% - 20px);
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #888;
+            background-color: #ecf0f1; /* Fondo claro para el input */
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #3498db; /* Fondo azul para los botones */
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #2980b9; /* Fondo azul oscuro al hacer hover */
+        }
+
+        #send-button {
+            background-color: #2ecc71; /* Fondo verde para el botón de enviar */
+        }
+
+        #send-button:hover {
+            background-color: #27ae60;
+        }
+
+        #dis-button {
+            background-color: #e74c3c; /* Fondo rojo para el botón de desconectar */
+        }
+
+        #dis-button:hover {
+            background-color: #c0392b;
+        }
+
+        #divDisconnect {
+            margin-top: 20px;
+        }
+
+        /* Estilos para el texto de los jugadores en línea */
+        #info-players span {
+            font-size: 18px;
+            color: green;
+        }
     </style>
 </head>
 <body>
     <div class="todoDiv" id="TodoDiv">
         <div class="chatDiv" id="input-form">
-            <div id="divDisconnect"  style="display: none;">
+            <div id="divDisconnect" style="display: none;">
                 <input id="value-input" placeholder='Prueba a decir algo' type='text' name="name">
                 <button id="send-button">Enviar</button>
                 <button id="dis-button" onclick="Disconnect()">Desconectar</button>

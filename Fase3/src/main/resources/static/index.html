@@ -8,11 +8,22 @@
     <link rel="icon" href="assets/images/icon.ico">    
 
     <style type="text/css">
-        body {
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center; /* Centrado horizontal */
+            align-items: center; /* Centrado vertical */
             background-color: #021B36;
         }
-    </style>
 
+        #videogame {
+            width: 800px; /* El mismo tamaño que en tu configuración Phaser */
+            height: 600px;
+        }
+    </style>
 
     <!-- Carga de scripts de Phaser y del juego -->
     <script type="text/javascript" src="gameScripts/MainMenuS.js"></script>
@@ -33,7 +44,5 @@
 </head>
 <body>
     <div id="videogame"></div>
-
-
 </body>
 </html>

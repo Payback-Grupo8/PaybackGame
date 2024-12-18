@@ -21,7 +21,7 @@ class Lobby extends Phaser.Scene {
 
         // Inicializar teclas
         this.returnKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ESC);
-        this.input.keyboard.enabled = true; 
+        this.input.keyboard.enabled = true;
 
         // Configurar llamadas AJAX
         this.setupAjaxCalls();
@@ -57,7 +57,7 @@ class Lobby extends Phaser.Scene {
                 console.log("Se ha unido el siguiente jugador: " + JSON.stringify(player));
                 this.id = player.id; // Asegurarse de que se usa this.id
                 callback(player);
-                $('#info-players').append('<div><span>' + "Espera " + player.username + ", te estás conectando..." + '</span></div>');
+                $('#info-players').append('<div><span style="font-size: 20px; font-weight: bold; color: white;">' + "Espera " + player.username + ", te estás conectando..." + '</span></div>');
             }).fail(() => {
                 console.log("Error al conectar el jugador");
                 $('#info-players').append('<div><span>' + "Error al conectar, por favor intente nuevamente." + '</span></div>');
@@ -65,7 +65,8 @@ class Lobby extends Phaser.Scene {
         }
 
         const showPlayer = (player) => {
-            $('#info-players').append('<div id="' + player.username + '"><span style="color:green">' + player.username + " está online " + '</span></div>');
+            $('#info-players').append('<div id="' + player.username + '"><span style="color:green; font-size: 20px; font-weight: bold;">' + player.username + " está online" + '</span></div>');
+
         }
 
         setInterval(function getJugador(total) {
