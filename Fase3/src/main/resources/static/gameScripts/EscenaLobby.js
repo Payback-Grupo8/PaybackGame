@@ -20,7 +20,6 @@ class Lobby extends Phaser.Scene {
         this.nameInput = this.add.dom(400, 300).createFromCache('form'); // Ajustar posición
 
         // Inicializar teclas
-        this.returnKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ESC);
         this.input.keyboard.enabled = true;
 
         // Configurar llamadas AJAX
@@ -179,8 +178,5 @@ class Lobby extends Phaser.Scene {
     }
 
     update() {
-        if (this.returnKey.isDown) {
-            this.scene.start('MainMenuScene');
-        }
     }
 }
