@@ -8,7 +8,7 @@ Game Design Document
 
 
 
-Versión: 0.3.1
+Versión: 0.7.1
 
 
 
@@ -381,7 +381,7 @@ Este diagrama de flujo enseña las distintas pantallas que tiene el juego y sus 
 
 
 
-![Diagrama](Capturas/diagrama_de_estados.jpg)
+![Diagrama](Capturas/diagrama_estados.jpg)
 
 
 
@@ -400,7 +400,7 @@ Este diagrama de flujo enseña las distintas pantallas que tiene el juego y sus 
 ### Menú Principal
 
 El menú principal de Payback es la puerta de entrada a la experiencia de juego, ofreciendo una interfaz sencilla pero efectiva para que los jugadores puedan comenzar a jugar rápidamente. Este consta de varios elementos: 
-![Menu](Capturas/menu.jpeg)
+![Menu](Capturas/MenuInicial.jpg)
 
 
 Título del videojuego (Payback) ubicado en la parte superior de la pantalla, el título "Payback" se presenta de manera prominente, destacando la identidad del juego y estableciendo el tono para la experiencia que está por venir.
@@ -419,31 +419,38 @@ Permite a los jugadores conocer las instrucciones del videojuego.
 El botón "Créditos"
 Permite a los jugadores conocer a los autores.
 
+El botón "Chat"
+Permite a los jugadores conectar entre si a través de un chat.
+
+### Chat
+Aquí el jugador podrá interactuar con otros jugadores a través de un chat, primero deberá conectarse con un nombre de usuario y posteriormente podrá escribir por un chat global.
+![Chat](Capturas/Chat.jpg)
+
 
 ### Menú Controles
 Se muestran los controles para ambos jugadores, movimiento y disparo para cada personaje.
-![MenuCon](Capturas/menuContr.jpeg)
+![MenuCon](Capturas/Controles.jpg)
 
 ### Menú Instrucciones
 Se muestran a los jugadores cómo jugar las partidas y pequeños consejos a seguir.
-![MenuInstrucciones](Capturas/menuInst.jpeg)
+![MenuInstrucciones](Capturas/Tutorial.jpg)
 
 ### Menú Créditos
 Aquí se muestran los nombres de los integrantes del equipo.
-![MenuCred](Capturas/menuCred.jpeg)
+![MenuCred](Capturas/Creditos.jpg)
 
 ### Menú de Pausa
 
 El menú de pausa proporciona a los jugadores la capacidad de tomar un respiro durante la partida y realizar acciones adicionales sin interferir con la acción del juego
 Acceso con la tecla ‘Esc’ los jugadores pueden pausar la partida presionando la tecla ‘Esc’ en su teclado o con el botón de Pause incluido en la parte superior de la pantalla. 
 Dentro del menú de pausa, los jugadores tienen la opción de continuar la partida o salir de la partida, con los botones explicados anteriormente.
-![MenuPausa](Capturas/menuPausa.jpeg)
+![MenuPausa](Capturas/Pausa.jpg)
 
 ### Menú de Victoria
 
 En esta escena se muestra que jugador ha ganado y un botón para regresar al menú principal
-![victoria_J1](Capturas/victoria_J1.jpeg)
-![victoria_J2](Capturas/victoria_J2.jpeg)
+![victoria_J1](Capturas/VicJ1.jpg)
+![victoria_J2](Capturas/VicJ2.jpg)
 
 
 # Escenarios
@@ -452,7 +459,7 @@ Los escenarios en Payback ofrecen una variedad de entornos únicos donde se desa
 
 Los escenarios cuentan con diferentes niveles en el eje y  están compuestos por plataformas flotantes, agregando una dimensión vertical a la jugabilidad y permitiendo estrategias de movimiento y combate complejas. Al inicio de la partida, cada jugador aparece en puntos distintos del mapa, lo que fomenta la estrategia al comenzar el juego.
 
-![Juego](Capturas/juego.jpeg)
+![Juego](Capturas/Juego.jpg)
 
 # Modos de juego
 
@@ -529,9 +536,21 @@ La compra única garantiza a los jugadores que obtendrán una experiencia comple
 La estrategia de monetización busca encontrar un equilibrio entre el precio inicial del juego y el valor percibido por los jugadores, asegurando que la compra única ofrezca una experiencia de juego completa y satisfactoria.
 
 
+# API-REST
+El código implementa una API REST utilizando Spring Boot en Java, diseñada para gestionar un "lobby" de usuarios y mensajes dentro de un entorno de chat. Esta API REST ofrece una serie de endpoints que permiten realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre usuarios y mensajes, facilitando una comunicación eficiente y estructurada entre el cliente y el servidor. Los métodos HTTP adecuados, como GET, POST y DELETE, se utilizan para cada operación, asegurando que las interacciones sean claras y sigan los estándares establecidos para APIs RESTful.
 
+La API incluye funcionalidades clave para la gestión del chat y del lobby de usuarios. Por ejemplo, el endpoint GET /lobby permite recuperar todos los mensajes almacenados en el chat, devolviendo una lista de cadenas de texto que representan estos mensajes. Asimismo, el endpoint GET /lobby/jugadores proporciona una colección de objetos User, que representan a todos los usuarios registrados en el lobby. Para la creación de nuevos recursos, los endpoints POST /lobby/mensaje y POST /lobby permiten añadir nuevos mensajes y usuarios respectivamente. El método POST /lobby/mensaje recibe un objeto Message en el cuerpo de la solicitud, lo añade al chat y lo almacena, mientras que POST /lobby crea un nuevo usuario, asignándole un ID único y almacenando en la lista de usuarios.
 
+Además de la creación y recuperación de recursos, la API permite obtener información específica de un usuario a través del endpoint GET /lobby/{id}, que devuelve los detalles del usuario correspondiente al ID proporcionado, o un código de estado 404 Not Found si el usuario no existe. La eliminación de usuarios se maneja con el endpoint DELETE /lobby/{id}, que elimina al usuario especificado por el ID y devuelve el objeto User eliminado o un código de estado 404 Not Found si el usuario no se encuentra. Para obtener información adicional, el endpoint GET /lobby/valor devuelve el número total de usuarios en el lobby, proporcionando una visión rápida del tamaño del lobby.
 
+En resumen, esta API REST está diseñada para ser robusta y fácil de usar, permitiendo una gestión eficiente del lobby y del chat de usuarios. Al seguir las buenas prácticas de desarrollo de APIs REST, como el uso adecuado de los métodos HTTP y los códigos de estado, se asegura que los clientes de la API puedan entender y manejar adecuadamente las respuestas del servidor. Esto facilita una integración fluida con otras aplicaciones o servicios, haciendo de esta API una herramienta valiosa para cualquier aplicación que requiera la gestión de usuarios y mensajes en tiempo real.
+
+Para ejecutar el archivo .jar, que se encuentra en la siguiente ruta:
+...src\main\java\com\payback\demo\PayBackApplication.java
+
+Con ello debes ejecutar esa aplicación.java y en el navegador debes escribir LocalHost:8080
+
+![Diagrama de clases](Capturas/diagrama.jpg)
 
 
 
@@ -562,7 +581,3 @@ José lidera el equipo de programación, encargado de desarrollar y mantener el 
 
 Jefe de proyecto: Javier Luis Moreno Erustes
 Javi lidera el equipo de proyecto, supervisando la planificación, coordinación y ejecución de todas las actividades relacionadas con el desarrollo del juego. Se encarga de gestionar los recursos, presupuestos y plazos para asegurar que el proyecto se complete con éxito y dentro del tiempo y el presupuesto establecidos.
-
-Jefe de modelado: Carlos Vega San Román
-Carlos lidera el equipo de modelado, encargado de crear los modelos bidimensionales de los personajes, escenarios y objetos del juego. Supervisa el proceso de modelado, desde la creación de los bocetos iniciales hasta la implementación final en el juego.
-
