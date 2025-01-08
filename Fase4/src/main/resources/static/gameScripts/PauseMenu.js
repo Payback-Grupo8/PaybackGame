@@ -17,7 +17,7 @@ class PauseMenuScene extends Phaser.Scene {
 
     preload() {
         //Cargamos las imágenes
-        this.load.image('botonReanudar', 'assets/images/botonJugar.png')
+        this.load.image('botonReanudar', 'assets/images/reanudarBoton.png')
         this.load.image('botonPause', 'assets/images/pausa.png')
         this.load.image('fondoPausa', 'assets/images/backgroundpausa.jpeg')
         this.load.image('botonExit', 'assets/images/botonSalir.png')
