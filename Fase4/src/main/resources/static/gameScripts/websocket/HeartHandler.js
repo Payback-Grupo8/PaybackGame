@@ -1,7 +1,11 @@
 var heartSocket;
 
 var createHeartSocket = function () {
-    heartSocket = new WebSocket("ws://localhost:8080/payback/shoot");
+    const host = window.location.hostname; 
+    const port = 8080; 
+    const path = "/payback/lobby";
+    
+    lobbySocket = new WebSocket(`ws://${host}:${port}${path}`);
 
     heartSocket.onopen = function () {
         console.log("Websocket de disparos creado");
