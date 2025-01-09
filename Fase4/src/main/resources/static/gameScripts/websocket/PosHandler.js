@@ -45,12 +45,16 @@ createPosSocket = function () {
             yP2 = data.p_y
             lastP1direction = data.dir
             p2_isIdle = data.idle
+            player2.setVisible(true);
+            player2.setActive(true);s
         }
         if (data.idPlayer == 1) {
             xP1 = data.p_x
             yP1 = data.p_y
             lastP2direction = data.dir
             p1_isIdle = data.idle
+            player1.setVisible(true);
+            player1.setActive(true);
 
         }
     }
