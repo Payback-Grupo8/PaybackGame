@@ -3,13 +3,12 @@ var localPlayer;
 var myLobbyTimeOut;
 var gameCreated = false;
 
+// Obtiene la dirección del servidor desde la URL actual de la página
+var serverIP = window.location.hostname;
+
 createLobby = function (scenePointer) {
-    const host = window.location.hostname; 
-    const port = 8080; 
-    const path = "/payback/lobby";
-    
-    lobbyScenePointer = scenePointer;
-    lobbySocket = new WebSocket(`ws://${host}:${port}${path}`);
+	lobbyScenePointer = scenePointer;
+    lobbySocket = new WebSocket(`ws://${serverIP}:8080/payback/lobby`);
 
     lobbySocket.onopen = function () {
         console.log("Lobby creada");
