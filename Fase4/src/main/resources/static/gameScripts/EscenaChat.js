@@ -167,7 +167,7 @@ class EscenaChat extends Phaser.Scene {
 
     update() {
         if (this.returnKey.isDown) {
-            this.scene.start('PauseMenuScene');
+            this.scene.start('MainMenuScene');
         }
     }
 }
