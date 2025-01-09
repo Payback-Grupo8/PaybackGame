@@ -9,7 +9,6 @@ class MainMenuScene extends Phaser.Scene {
         this.creditsButtonContainer;
         this.contrlButtonContainer;
         this.tutorialButtonContainer;
-        this.botonDetectChat;
     }
 
     initialize() {
@@ -22,7 +21,6 @@ class MainMenuScene extends Phaser.Scene {
         this.load.image('playButton', 'assets/images/botonJugar.png');
         this.load.image('creditsButton', 'assets/images/botonCredits.png');
         this.load.image('contrlButton', 'assets/images/botonContrl.png');
-        this.load.image('chatButton', 'assets/images/botonChat.png');
         this.load.image('tutorialButton', 'assets/images/botonTutorial.png');
         this.load.audio("musica", ["assets/sounds/music.mp3"]);
 
@@ -54,7 +52,7 @@ class MainMenuScene extends Phaser.Scene {
         const creditsButton = this.add.image(0, 0, 'creditsButton');
         const contrlButton = this.add.image(0, 0, 'contrlButton');
         const tutorialButton = this.add.image(0, 0, 'tutorialButton');
-        const chatButton = this.add.image(0, 0, 'chatButton');
+       
 
         // Hacemos que el botón sea interactivo
         this.playButtonContainer = this.add.container(400, 450, [playButton]);
@@ -72,10 +70,6 @@ class MainMenuScene extends Phaser.Scene {
         this.tutorialButtonContainer = this.add.container(100, 100, [tutorialButton]);
         this.tutorialButtonContainer.setSize(tutorialButton.width, tutorialButton.height);
         this.tutorialButtonContainer.setInteractive();
-        // Hacemos que el botón sea interactivo
-        this.chatButtonContainer = this.add.container(700, 550, [chatButton]);
-        this.chatButtonContainer.setSize(chatButton.width, chatButton.height);
-        this.chatButtonContainer.setInteractive();
         //this.chatButtonContainer.setScale(0.1);
 
 
@@ -146,22 +140,7 @@ class MainMenuScene extends Phaser.Scene {
             tutorialButton.setScale(1);
         });
 
-        // Si pulsamos, nos lleva a la escena de chat
-        this.chatButtonContainer.on('pointerdown', function () {
-            this.scene.scene.start('ChatScene');
-            menu_music.stop(menu_musicConfig)
-        });
-
-        // Resalta el botón al pasar el puntero sobre él
-        this.chatButtonContainer.on('pointerover', function () {
-            chatButton.setScale(1.5);
-        });
-
-        // Restaura la escala normal del botón al quitar el puntero
-        this.chatButtonContainer.on('pointerout', function () {
-            chatButton.setScale(1);
-        });
-        
+                
     }
 
     update() {
