@@ -4,8 +4,12 @@ var myLobbyTimeOut;
 var gameCreated = false;
 
 createLobby = function (scenePointer) {
-	lobbyScenePointer = scenePointer;
-    lobbySocket = new WebSocket("ws://localhost:8080/payback/lobby");
+    const host = window.location.hostname; 
+    const port = 8080; 
+    const path = "/payback/lobby";
+    
+    lobbyScenePointer = scenePointer;
+    lobbySocket = new WebSocket(`ws://${host}:${port}${path}`);
 
     lobbySocket.onopen = function () {
         console.log("Lobby creada");
