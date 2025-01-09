@@ -550,11 +550,30 @@ Para ejecutar el archivo .jar, que se encuentra en la siguiente ruta:
 
 Con ello debes ejecutar esa aplicación.java y en el navegador debes escribir LocalHost:8080
 
+
 ![Diagrama de clases](Capturas/Fase3/diagrama.jpg)
 
 
 
+# Web Sockets
 
+Lobby La clase WS_Lobby se encarga de gestionar las conexiones WebSocket y de mantener un seguimiento de los usuarios conectados. Utiliza un ConcurrentHashMap para almacenar las sesiones de los usuarios, lo que permite un acceso seguro y concurrente. Además, define dos variables, user1_id y user2_id, para identificar a los dos usuarios principales en el lobby.
+
+Cuando se establece una nueva conexión mediante el método afterConnectionEstablished, el manejador verifica si hay menos de dos usuarios conectados. Si es así, la nueva sesión se agrega al mapa de usuarios. Dependiendo de si user1_id o user2_id están disponibles, la sesión se asigna a una de estas variables y se envía un mensaje JSON al cliente indicando su rol (jugador 1 o jugador 2). Si ambos usuarios están conectados, se envía un mensaje adicional indicando que ambos jugadores están listos.
+
+El método handleTextMessage procesa los mensajes recibidos de los usuarios. Utiliza ObjectMapper para convertir el mensaje de texto en un objeto JSON y determinar el tipo de mensaje. Dependiendo del tipo (play, winJ1, winJ2), el manejador envía mensajes correspondientes a todos los usuarios conectados, notificándoles del estado actual del juego.
+
+Posición El código WS_Position implementa un manejador de WebSocket utilizando Spring Boot, que facilita la comunicación en tiempo real entre el servidor y los clientes. Esta clase extiende TextWebSocketHandler para manejar mensajes de texto y gestionar conexiones WebSocket. El manejador mantiene un mapa concurrente (ConcurrentHashMap) para almacenar las sesiones WebSocket de los usuarios. Este mapa garantiza la seguridad en el acceso concurrente, permitiendo que múltiples hilos lean y escriban en él sin causar inconsistencias.
+
+La función createPosSocket en JavaScript establece y maneja una conexión WebSocket desde el lado del cliente. La función createPosSocket crea un nuevo WebSocket apuntando a la URL del servidor. Los eventos de conexión (onopen), error (onerror), y cierre (onclose) se manejan con funciones específicas que registran mensajes en la consola para fines de depuración.
+
+La implementación de WebSocket tanto en el servidor (con Java y Spring Boot) como en el cliente (con JavaScript) permite una comunicación bidireccional en tiempo real. El servidor gestiona las conexiones y reenvía los mensajes a los clientes conectados, mientras que el cliente envía y recibe actualizaciones de posición, manteniendo a los usuarios sincronizados. Esta arquitectura es esencial para aplicaciones que requieren interacciones dinámicas y en tiempo real, como juegos en línea y sistemas de seguimiento de posiciones.
+
+Disparo El código WS_Shoot implementa un manejador de WebSocket utilizando Spring Boot para gestionar eventos de disparos en un juego multijugador. Esta clase extiende TextWebSocketHandler y maneja la conexión, desconexión y el envío de mensajes entre los usuarios conectados. Utiliza un ConcurrentHashMap para almacenar las sesiones WebSocket activas, garantizando la seguridad en el acceso concurrente. Cuando una conexión es establecida o cerrada, se actualiza este mapa adecuadamente.
+
+El método handleTextMessage es crucial para la lógica del juego, ya que recibe mensajes de los usuarios y los reenvía a todos los demás usuarios conectados. Esta función asegura que, cuando un jugador envía un mensaje (como un evento de disparo), dicho mensaje se propague a los otros jugadores, manteniendo así la sincronización del estado del juego entre todos los participantes. La función sendMessage garantiza que los mensajes solo se envíen si las sesiones están abiertas, manejando cualquier excepción que pueda ocurrir durante el envío.
+
+Del lado del cliente, el código JavaScript establece una conexión WebSocket con el servidor en el endpoint ws://localhost:8080/payback/shoot. La función createShootSocket maneja los eventos de conexión, error, y cierre de la conexión WebSocket, proporcionando también un método sendWS para enviar mensajes de disparos al servidor. Cuando se recibe un mensaje, la función onmessage actualiza el estado del disparo de los jugadores en el juego, permitiendo que la interfaz del usuario refleje los eventos de disparo en tiempo real. Esto asegura una experiencia de juego fluida y reactiva para los usuarios.
 
 
 
