@@ -3,11 +3,7 @@ var posSocketCreated = false;
 
 
 createPosSocket = function () {
-    const host = window.location.hostname; 
-    const port = 8080; 
-    const path = "/payback/lobby";
-    
-    lobbySocket = new WebSocket(`ws://${host}:${port}${path}`);
+    posSocket = new WebSocket("ws://localhost:8080/payback/position");
 
     posSocket.onopen = function () {
         console.log("Websocket de posicion creado");
