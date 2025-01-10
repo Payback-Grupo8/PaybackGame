@@ -478,7 +478,7 @@ Aquí el jugador podrá interactuar con otros jugadores a través de un chat, pr
 
 ### Menú Controles
 Se muestran los controles para ambos jugadores, movimiento y disparo para cada personaje.
-![MenuCon](Capturas/Fase3/Controles.jpg)
+![MenuCon](Capturas/Controles.jpg)
 
 ### Menú Instrucciones
 Se muestran a los jugadores cómo jugar las partidas y pequeños consejos a seguir.
