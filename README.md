@@ -78,6 +78,8 @@ Música y efectos de sonido	21
 Referencias de otros videojuegos	21
 
 Monetización	22
+API REST 23
+WebSockets 24
 Equipo	25
 
 
