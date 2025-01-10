@@ -576,7 +576,7 @@ Del lado del cliente, el código JavaScript establece una conexión WebSocket co
 
 
 
-![Diagrama de clases](Capturas/diagrama.jpg)
+![Diagrama de clases](Capturas/diagrama.jpeg)
 
 
 
