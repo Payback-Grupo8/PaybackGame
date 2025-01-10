@@ -551,7 +551,6 @@ Para ejecutar el archivo .jar, que se encuentra en la siguiente ruta:
 Con ello debes ejecutar esa aplicación.java y en el navegador debes escribir LocalHost:8080
 
 
-![Diagrama de clases](Capturas/Fase3/diagrama.jpg)
 
 
 
@@ -577,7 +576,7 @@ Del lado del cliente, el código JavaScript establece una conexión WebSocket co
 
 
 
-
+![Diagrama de clases](Capturas/diagrama.jpeg)
 
 
 
