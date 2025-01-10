@@ -32,7 +32,7 @@ Javier Luis Moreno Erustes: jl.moreno.2020@alumnos.urjc.es / https://github.com/
 
 Carlos Vega San Román: c.vegas.2020@alumnos.urjc.es
 
-##Video de presentación
+## Video de presentación
 Enlace al video de presentación: https://www.youtube.com/watch?v=z5gaTHsl_7E&t=96s
 
 # Índice
