@@ -32,54 +32,95 @@ Carlos Vega San Román: c.vegas.2020@alumnos.urjc.es
 # Índice
 
 Resumen	4
+
 Concepto del juego	4
+
 Características del juego	4
+
 Género	5
+
 Juego de lucha	6
+
 Disparos	6
+
 Plataformas	6
+
 Público objetivo	6
+
 Jugabilidad	7
+
 Referencias a otros videojuegos	8
 
 Historia y trasfondo	9
 
 Mecánicas de juego	10
+
 Mecánicas	10
+
 Movimiento	10
+
 Armamento	10
+
 PowerUps	10
+
 Supervivencia	11
+
 Sistema de combate	11
+
 Plataformas	11
+
 Elección de personajes	11
+
 Personajes	12
+
 Características de los personajes	12
+
 Cámaras	13
+
 Periféricos	14
+
 Controles	14
+
 Movimiento y físicas	15
+
 Movimiento sobre plataformas	15
+
 Interacción entre elementos	15
+
 Colisiones y Física del Juego	16
 
 Interfaz	17
+
 Diagrama de Flujo	17
+
 Menú Principal	17
+
 Menú de Selección del Personaje	18
+
 Menú de Pausa	18
+
 Escenarios	19
+
 Modos de juego	19
+
 Progresión y personalización	19
+
 Arte y sonido	20
+
 Estilo artístico 2D	20
+
 Colores	20
+
 Música y efectos de sonido	21
+
 Referencias de otros videojuegos	21
 
 Monetización	22
+
 API REST 23
+
 WebSockets 24
+
 Equipo	25
 
 
